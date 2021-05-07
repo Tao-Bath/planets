@@ -259,19 +259,19 @@ def plot_p_v(u, VL, K, flag, path=''):
 def plot_K(K, K_mean, path='', filename='K.eps'):
     plt.figure(figsize=(10,7.5))    
     plt.subplot(221)
-    p11 = plot(K[0,0], title='$K^{(1,1)}_{mean}=%.2f$' %K_mean[0])
+    p11 = plot(K[0,0], title='$K^{(1,1)}_{mean}=%.2f$' %K_mean[0], vmin=0, vmax=1)
     plt.colorbar(p11)
     
     plt.subplot(222)
-    p12 = plot(K[0,1], title='$K^{(1,2)}_{mean}=%.2f$' %K_mean[1])
+    p12 = plot(K[0,1], title='$K^{(1,2)}_{mean}=%.2f$' %K_mean[1], vmin=0, vmax=1)
     plt.colorbar(p12)
     
     plt.subplot(223)
-    p13 = plot(K[1,0], title='$K^{(2,1)}_{mean}=%.2f$' %K_mean[2])
+    p13 = plot(K[1,0], title='$K^{(2,1)}_{mean}=%.2f$' %K_mean[2], vmin=0, vmax=1)
     plt.colorbar(p13)
     
     plt.subplot(224)
-    p14 = plot(K[1,1], title='$K^{(2,2)}_{mean}=%.2f$' %K_mean[3])
+    p14 = plot(K[1,1], title='$K^{(2,2)}_{mean}=%.2f$' %K_mean[3], vmin=0, vmax=1)
     plt.colorbar(p14)
     plt.suptitle('Permeability tensor')
     
